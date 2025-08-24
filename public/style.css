@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+.siteName{
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+    font-size: 2rem;
+}
+.addSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addButton{
+    color: white;
+    background-color: rgb(221, 20, 20);
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    border-radius: 30px;
+    border: 2px solid white;
+}
+.addBlogSectionHeading{
+    color: white;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 1.7rem;
+}
+.addBlogSection{
+    margin: 10px 40px;
+    border: 2px solid white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.input{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.inputName{
+    color: white;
+    font-size: 1.5rem;
+
+}
+/* .inputValue{
+    width:500px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    font-size: larger;
+} */
+#appendersName{
+    /* width:calc(100%-100px); */
+    width: 500px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    font-size: larger;
+    padding: 7px;
+}
+#appendingDate{
+    /* width:calc(100%-100px); */
+    width: 500px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    font-size: larger;
+    padding: 7px;
+}
+#mainBlog{
+    /* width:calc(100%-100px); */
+    width: 500px;
+    height: 400px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+    font-size: larger;
+    padding: 7px;
+    
+}
+#mainBlog::placeholder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 5px;
+    padding-top: 5px;
+    
+}
+#EnterBlog{
+    align-self: flex-start;
+}
+.publishBtn{
+    margin: 40px;
+    width: 50%;
+    background-color: white;
+    color: black;
+    align-self: center;
+    padding: 10px 20px;
+    font-size: xx-large;
+    border-radius: 20px;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px;
+    gap: 30px;
+    
+}
+.blog{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 295px;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .input{
+    flex-direction: column;
+  }
+  #EnterBlog{
+    align-self: center;
+  }
+  .addBlogSection{
+    gap: 50px;
+  }
+  #appendersName{
+    width: 100%;
+  }
+  #appendingDate{
+    width: 100%;
+  }
+  #mainBlog{
+    width: 100%;
+  }
+}

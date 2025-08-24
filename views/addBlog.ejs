@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <p class="siteName">
+            <%= siteName %>
+        </p>
+    </header>
+    <div class="addBlogSectionHeading">Add your blog :)</div>
+    <form class="addBlogSection" action="/submit" method="POST">
+        <div class="input">
+            <p class="inputName">  Enter your name:</p>
+            <input class="inputvalue" id="appendersName" type="text" name="name" placeholder="Enter your name">
+        </div>
+        <div class="input">
+            <p class="inputName">  Enter publishing date and time:</p>
+            <input class="inputvalue" id="appendingDate" type="datetime-local" name="date">
+        </div>
+        <div class="input">
+            <p class="inputName" id="EnterBlog">  Enter your blog:</p>
+            <input class="inputvalue" id="mainBlog" type="text" name="blogContent" placeholder="Blog here...">
+        </div>
+        <button  class="publishBtn" type="submit">Publish your blog</button>
+    </form>
+</body>
+</html>

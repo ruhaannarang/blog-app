@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <p class="siteName">
+            <%= siteName %>
+        </p>
+    </header>
+    <div class="addSection">
+        <a href="/addBlog.ejs" class="addButton">Add new blog</a>
+    </div>
+    <div class="content">
+        <!-- <div class="blog">
+            <div class="name"></div>
+            <div class="datetime"></div>
+            <div class="blogMainContent"></div>
+        </div> -->
+    </div>
+
+
+
+    <script>
+        async function getBlogs() {
+            let url="http://localhost:3000/getData"
+            let api=await fetch(url)
+            let data=await api.json();
+            console.log(data)
+            // let realData= await data[0];
+            // console.log(data.length)
+            
+            for (let i = 0; i < data.length; i++) {
+                let blog=document.createElement("div")
+                blog.classList.add("blog")
+                let content=document.body.querySelector(".content")
+                content.append(blog)
+                let nameOFPublisher=document.createElement("div")
+                blog.appendChild(nameOFPublisher)
+                nameOFPublisher.classList.add("name")
+                let dateTimeofPublishing=document.createElement("div")
+                blog.appendChild(dateTimeofPublishing)
+                dateTimeofPublishing.classList.add("datetime")
+                let publishedBlog=document.createElement("div")
+                blog.appendChild(publishedBlog)
+                publishedBlog.classList.add("blogMainContent")
+                nameOFPublisher.innerHTML=`${data[i].name}`
+                dateTimeofPublishing.innerHTML=`${data[i].dateTime}`
+                publishedBlog.innerHTML=`${data[i].blogContent}`
+                
+            }
+        }
+        getBlogs()
+    </script>
+</body>
+
+</html>
