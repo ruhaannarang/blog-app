@@ -43,8 +43,9 @@ console.log(dateTimes);
 console.log(blogContents);
 
 app.get('/', (req, res) => {
-    let siteName = "myBlogs.com"
-    res.render("index", { siteName })
+    // let siteName = "myBlogs.com"
+    res.redirect("/")
+    // res.render("index", { siteName })
 })
 
 
