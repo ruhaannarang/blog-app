@@ -44,7 +44,7 @@ console.log(blogContents);
 
 app.get('/', (req, res) => {
     // let siteName = "myBlogs.com"
-    res.redirect("/")
+    res.redirect("/https://blog-app-abn1.onrender.com/")
     // res.render("index", { siteName })
 })
 
