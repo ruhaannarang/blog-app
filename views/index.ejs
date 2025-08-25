@@ -30,6 +30,10 @@
     <script>
         async function getBlogs() {
             let url="https://blog-app-abn1.onrender.com/getData"
+
+// for local testing
+            // let url ="http://localhost:3000/getData"   
+
             let api=await fetch(url)
             let data=await api.json();
             console.log(data)
