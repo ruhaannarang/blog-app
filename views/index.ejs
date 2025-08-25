@@ -54,10 +54,9 @@
                 let publishedBlog=document.createElement("div")
                 blog.appendChild(publishedBlog)
                 publishedBlog.classList.add("blogMainContent")
-                nameOFPublisher.innerHTML=`By-${data[i].name}`
-                dateTimeofPublishing.innerHTML=`Time: ${data[i].dateTime}`
-                publishedBlog.innerHTML=`${data[i].blogContent}`
-                
+                nameOFPublisher.innerHTML=`By:  ${data[i].name}`
+                dateTimeofPublishing.innerHTML=`Date&Time: ${data[i].dateTime}`
+                publishedBlog.innerHTML=`${data[i].blogContent}` 
             }
         }
         getBlogs()
