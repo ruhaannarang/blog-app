@@ -18,24 +18,27 @@
         <a href="/addBlog.ejs" class="addButton">Add new blog</a>
     </div>
     <div class="content">
-        <% blog.forEach(item => {%>
+        <% blogs.forEach(item => {%>
             <div class="blog">
-                <div class="name">
-                    <%= item.name %>
+                <div class="name">Published by: 
+                    <%= item.nameOfPublisher %>
+                    <% console.log(item.name) %>
                 </div>
-                <div class="datetime">
-                    <%= dateTime %>
+                <div class="datetime">Published on & at:
+                    <%= item.dateOfPublishing %>
                 </div>
                 <div class="blogMainContent">
-                    <%= blogContent %>
+                    <%= item.mainBlogOfPublisher %>
                 </div>
             </div>
         <% }); %>
     </div>
 
+<script>
+    
+</script>
 
-
-    <script>
+    <!-- <script>
         async function getBlogs() {
             let url="https://blog-app-abn1.onrender.com/getData"
 
@@ -68,7 +71,7 @@
             }
         }
         getBlogs()
-    </script>
+    </script> -->
 </body>
 
 </html>
