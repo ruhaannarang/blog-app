@@ -18,11 +18,19 @@
         <a href="/addBlog.ejs" class="addButton">Add new blog</a>
     </div>
     <div class="content">
-        <!-- <div class="blog">
-            <div class="name"></div>
-            <div class="datetime"></div>
-            <div class="blogMainContent"></div>
-        </div> -->
+        <% blog.forEach(item => {%>
+            <div class="blog">
+                <div class="name">
+                    <%= item.name %>
+                </div>
+                <div class="datetime">
+                    <%= dateTime %>
+                </div>
+                <div class="blogMainContent">
+                    <%= blogContent %>
+                </div>
+            </div>
+        <% }); %>
     </div>
 
 
