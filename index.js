@@ -22,6 +22,7 @@ console.log(process.env.MONGO_URI);
 
     app.get('/', async (req, res) => {
       let siteName = "myBlogs.com";
+      
       const blogs = await blog.find();
       res.render("index", { siteName, blogs });
     });
